@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentation</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        justify-content: space-around;
+        margin: 200px 50px;
+    }
+    .rounded {
+        border-radius: 20px;
+        background-color: #ddd;
+        padding: 20px;
+        height: 200px;
+        width: 500px;
+        text-align: center; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-decoration: none;
+        color: #000; 
+        font-size: 20px;
+    }
+    .rounded:hover {
+        background-color: #bbb; 
+    }
+</style>
 </head>
 <body>
-    <div><a href="./backend/_site/index.html"> Backend Doc </a></div>
-    <div><a href="./frontend/index.html"> Frontend Doc </a></div>
+<div class="container">
+    <div>
+        <a href="./backend/_site/index.html" class="rounded">Backend Docs</a>
+    </div>
+    <div>
+        <a href="./frontend/index.html" class="rounded">Frontend Docs</a>
+    </div>
+</div>
 </body>
 </html>
