@@ -41,13 +41,12 @@ jobs:
         node-version: '18.x'
         
     - name: Install dependencies
-      run: npm install
       working-directory: 'ClientApp'
+      run: npm install
 
     - name: Build Frontend Docs
-      run: npm run compodoc:build
-      shell: cmd
       working-directory: 'ClientApp'
+      run: npm run compodoc:build
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
