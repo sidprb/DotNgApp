@@ -40,9 +40,9 @@ jobs:
       with:
         node-version: '18.x'
         
-    - name: Clean npm cache      
-      run: npm cache clean --force
-      shell: cmd
+    - name: Install dependencies
+      run: npm install
+      working-directory: 'ClientApp'
 
     - name: Build Frontend Docs
       run: npm run compodoc:build
