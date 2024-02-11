@@ -10,7 +10,11 @@
     "build": "ng build",
     "build:ssr": "ng run DotnetNgApp:server:dev",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "compodoc:build": "compodoc -d ../documentation/frontend -p tsconfig.doc.json",
+    "compodoc:build-and-serve": "compodoc -d ../documentation/frontend -p tsconfig.doc.json -s -r 9001",
+    "compodoc:serve": "compodoc -d ../documentation/frontend -s -r 9001",
+    "compodoc": "npx compodoc -d ../documentation/frontend -p tsconfig.doc.json"
   },
   "private": true,
   "dependencies": {
@@ -36,6 +40,7 @@
     "@angular-devkit/build-angular": "^15.2.7",
     "@angular/cli": "^15.2.7",
     "@angular/compiler-cli": "^15.2.8",
+    "@compodoc/compodoc": "^1.1.23",
     "@types/jasmine": "~4.3.1",
     "@types/jasminewd2": "~2.0.10",
     "@types/node": "^18.16.3",
@@ -50,6 +55,5 @@
   "overrides": {
     "autoprefixer": "10.4.5",
     "webpack": "5.81.0"
-  },
-  "optionalDependencies": {}
+  }
 }
